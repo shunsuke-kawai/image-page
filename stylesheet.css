@@ -1,0 +1,527 @@
+Glarity Summary * {
+    box-sizing: border-box;
+    font-family: "serif";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+/* main  */
+.top-wrapper {
+    background-image: url("./photos/main.jpg");
+    background-size: cover;
+    padding: 350px 0px 450px 0;
+    background-position: right 60% bottom 0%;
+    position: relative;
+    color: white;
+}
+
+.top-wrapper::before {
+    background-color: rgba(0, 0, 0, 0);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.main-title {
+    padding-left: 150px;
+}
+
+.main-title a {
+    margin-top: 30px;
+}
+
+.main-btn {
+    background-color: #ffffff;
+    border-radius: 21px;
+    display: inline-block;
+    cursor: pointer;
+    color: #707070;
+    font-size: 18px;
+    padding: 6px 50px;
+    text-decoration: none;
+}
+
+.main-btn:hover {
+    background-color: #ededed transition:0.5s;
+    cursor: pointer;
+}
+
+.main-btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* header  */
+header {
+    height: 70px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-left {
+    margin: 0 0 30px 30px;
+    float: left;
+}
+
+.header-left img {
+    width: 50px;
+}
+
+.menu-icon {
+    float: right;
+    font-size: 25px;
+    padding: 21px 0;
+    margin-right: 30px;
+    display: none;
+}
+
+.header-right ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-right li {
+    list-style: none;
+    float: left;
+    display: inline;
+    padding: 0 30px;
+    margin-top: 15px;
+}
+
+.header-right a {
+    color: black;
+}
+
+/* ABOUT  */
+.contents-wrapper {
+    width: 100%;
+    height: 250px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contents-wrapper h1 {
+    display: inline-block;
+    position: relative;
+}
+
+.contents-wrapper h1:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    /*下線の上下位置調整*/
+    display: inline-block;
+    width: 30px;
+    /*下線の幅*/
+    height: 2px;
+    /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+    /*位置調整*/
+    background-color: #666666;
+    /*下線の色*/
+}
+
+/* What we offer  */
+.offer-wrapper {
+    height: 600px;
+    text-align: center;
+}
+
+.offer-wrapper h1 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.offer-wrapper h1:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    /*下線の上下位置調整*/
+    display: inline-block;
+    width: 30px;
+    /*下線の幅*/
+    height: 2px;
+    /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+    /*位置調整*/
+    background-color: #666666;
+    /*下線の色*/
+}
+
+.offers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.offer {
+    width: 28%;
+
+}
+
+.offer img {
+    width: 95%;
+}
+
+.offer h2 {
+    display: inline-block;
+    position: relative;
+}
+
+.offer p {
+    padding: 0 20px;
+}
+
+.offer h2:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    /*下線の上下位置調整*/
+    display: inline-block;
+    width: 30px;
+    /*下線の幅*/
+    height: 2px;
+    /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+    /*位置調整*/
+    background-color: #666666;
+    /*下線の色*/
+}
+
+/* Brand Story  */
+.brandstory-wrapper {
+    height: 600px;
+    background-image: url("./photos/brandstory.jpg");
+    background-size: cover;
+
+    background-position: right 60% bottom 0%;
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.brandstory-wrapper::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.black {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.brandstory-btn {
+    background-color: #ffffff;
+    border-radius: 21px;
+    display: inline-block;
+    cursor: pointer;
+    color: #707070;
+    font-size: 18px;
+    padding: 6px 50px;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.brandstory-btn:hover {
+    background-color: #ededed transition:0.5s;
+    cursor: pointer;
+}
+
+.brandstory-btn:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* Cozy Space  */
+
+.cozyspace1-img,
+.cozyspace1-message {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cozyspace1-img img {
+    width: 400px;
+}
+
+.cozyspace1-message {
+    margin: 40px 0 0 100px;
+    width: 25%;
+}
+
+.cozyspace1-message h2 {
+    margin-bottom: 0px;
+}
+
+.cozyspace1-message h3 {
+    margin-top: 0px;
+    display: inline-block;
+    position: relative;
+}
+
+.cozyspace1-message h3:before {
+    content: '';
+    position: absolute;
+    left: 19%;
+    bottom: -18px;
+    /*下線の上下位置調整*/
+    display: inline-block;
+    width: 30px;
+    /*下線の幅*/
+    height: 2px;
+    /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+    /*位置調整*/
+    background-color: #666666;
+    /*下線の色*/
+}
+
+/* Cozy Space  */
+.cozyspace2-wrapper {
+    margin-top: 100px;
+    height: 800px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10% 0 10%;
+}
+
+
+.cozyspace2-wrapper img {
+    width: 500px;
+}
+
+.cozyspace2-message {
+    margin-top: 5%;
+    width: 25%;
+}
+
+.cozyspace2-img {
+    margin-left: 100px;
+}
+
+.cozyspace2-message h2 {
+    margin-bottom: 0px;
+}
+
+.cozyspace2-message h3 {
+    margin-top: 0px;
+    display: inline-block;
+    position: relative;
+}
+
+.cozyspace2-message h3 {
+    margin-top: 0px;
+    display: inline-block;
+    position: relative;
+}
+
+.cozyspace2-message h3:before {
+    content: '';
+    position: absolute;
+    left: 19%;
+    bottom: -18px;
+    /*下線の上下位置調整*/
+    display: inline-block;
+    width: 30px;
+    /*下線の幅*/
+    height: 2px;
+    /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+    /*位置調整*/
+    background-color: #666666;
+    /*下線の色*/
+}
+
+/* Garally  */
+.garally-wrapper {
+    height: auto;
+    margin-top: 100px;
+}
+
+.garally-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.garally-container img {
+    width: 33.3333%;
+}
+
+/* Contact form */
+.mail-wrapper {
+    height: 500px;
+    text-align: center;
+    background-color: #edefed;
+}
+
+.mail-wrapper h1 {
+    margin-top: 150px;
+}
+
+.form-area {
+    padding-top: 100px;
+
+}
+
+form {
+    width: 30%;
+    min-width: 9rem;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    float: left;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: darken(#f9f9f9, 10%);
+
+    &.error {
+        background: $red;
+        color: #fff;
+
+        &::placeholder {
+            color: darken($red, 60%);
+        }
+    }
+}
+
+input[type=submit] {
+    background-color: #001616;
+    color: white;
+    width: 100%;
+}
+
+textarea {
+    height: 10rem;
+}
+
+
+/* Footer  */
+footer {
+    height: 300px;
+    background-color: #001616;
+    overflow: hidden;
+}
+
+footer img {
+    width: 100px;
+}
+
+.footer-left {
+    float: left;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.footer-right {
+    padding-top: 115px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.footer-right li {
+    float: left;
+    list-style: none;
+    padding: 0 10px;
+
+}
+
+.sns {
+    color: white;
+}
+
+
+/* about page  */
+.about-wrapper {
+    height: 300px;
+}
+
+.explain-wrapper {
+    height: 300px;
+    margin-left: 100px;
+}
+
+.explain-wrapper h1 {
+    margin-top: 100px;
+}
+
+
+
+.about-btn {
+    background-color: #001616;
+    border-radius: 21px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    padding: 6px 50px;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.about-btn:hover {
+    background-color: #ededed transition:0.5s;
+    cursor: pointer;
+}
+
+.about-btn:active {
+    position: relative;
+    top: 1px;
+}
