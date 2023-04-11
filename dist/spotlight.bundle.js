@@ -1,4 +1,3 @@
-Glarity Summary
 /**
  * Spotlight.js v0.7.8 (Bundle)
  * Copyright 2019-2021 Nextapps GmbH

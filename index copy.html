@@ -3,68 +3,142 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport"
-        content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow">
     <title>sample</title>
     <script src="dist/spotlight.bundle.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <!--<script src="dist/js/spotlight.min.js"></script>-->
     <!--<link rel="stylesheet" href="dist/css/spotlight.min.css">-->
     <!-- Custom Control: -->
     <style>
-        /*
-         * Custom Control:
-         * ---------------
-         */
-        /* custom classes are always prefixed by "spl-" automatically */
-        .spl-like {
-            background-image: url(demo/gallery/heart-outline.svg);
-            background-size: 23px;
+        body {
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
         }
 
-        /* optionally, additional state to toggle the button: */
-        .spl-like.on {
-            background-image: url(demo/gallery/heart.svg);
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
         }
 
-        /*
-         * Custom Animation:
-         * -----------------
-         */
-        /* custom scene transition (slide effect) */
-        .only-this-gallery.show .spl-scene {
-            transition: transform 0.2s ease;
+        header {
+            height: 70px;
+            background-color: white;
+            width: 100%;
         }
 
-        /* custom animation "visible state" (css context by custom classname "only-this-gallery" to apply these animation just on a specific gallery) */
-        .only-this-gallery.show .spl-pane>* {
-            clip-path: circle(100% at center);
-            transition: transform 0.35s ease,
-                opacity 0.65s ease,
-                clip-path 0.8s ease;
+        .header-left {
+            margin: 0 0 30px 30px;
+            float: left;
         }
 
-        /* custom animation "hidden state" ("custom" is the name of the animation you pass as gallery option) */
-        .only-this-gallery .spl-pane .custom {
-            clip-path: circle(0px at center);
-            transition: transform 0.65s ease,
-                opacity 0.65s ease;
+        .header-left img {
+            width: 50px;
         }
 
-        /* animation state when gallery is hidden */
-        #spotlight.only-this-gallery {
-            clip-path: circle(0px at center);
+        .menu-icon {
+            float: right;
+            font-size: 25px;
+            padding: 21px 0;
+            margin-right: 30px;
+            display: none;
         }
 
-        /* animation state when gallery will open */
-        #spotlight.only-this-gallery.show {
-            clip-path: circle(100% at center);
-            transition: clip-path 0.65s ease 0.15s;
+        .header-right ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .header-right li {
+            list-style: none;
+            float: left;
+            display: inline;
+            padding: 0 30px;
+            margin-top: 15px;
+        }
+
+        .header-right a {
+            color: black;
+            margin: 5px;
+        }
+
+        main {
+            flex: 1;
+            background-color: rgba(255, 253, 237, 1);
+            overflow-y: scroll;
+        }
+
+        footer {
+            height: 80px;
+            background-color: #001616;
+        }
+
+        footer img {
+            width: 100px;
+        }
+
+        .footer-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .footer-left {
+            float: left;
+            margin-left: 50px;
+        }
+
+        .footer-right {
+            padding-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 5px;
+        }
+
+        .footer-right li {
+            float: left;
+            list-style: none;
+            padding: 0 10px;
+        }
+
+        .sns {
+            color: white;
+        }
+
+
+        .spotlight img,
+        .image {
+            width: 29vw;
+            height: auto;
+            max-width: 300px;
+            margin: 1vmin 1vmin;
+            content-visibility: auto;
+        }
+
+        .image {
+            display: inline-block;
+            height: 20vw;
+            max-height: 200px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .spotlight img {
+            height: 20vw;
+            max-height: 200px;
+            object-fit: contain;
+        }
+
+        .spotlight {
+            cursor: pointer;
+            display: inline-block;
         }
     </style>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="demo/style.css">
-    <link rel="stylesheet" href="stylesheet.css">
     <meta name="format-detection" content="telephone=no">
     <meta name="description"
         content="Web's most easy to integrate lightbox gallery library. Super-lightweight, outstanding performance, no dependencies.">
@@ -84,12 +158,11 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="container">
         <header>
-            <div class="container">
+            <div>
                 <div class="header-left">
                     <a href="./index.html">
-                        <img src="demo/gallery/brooklyn-bridge-1791001.jpg">
                     </a>
                 </div>
 
@@ -100,24 +173,17 @@
                         <a href="./about.html">
                             <li>about</li>
                         </a>
-                        <a href="./about.html">
+                        <a href="./about1.html">
                             <li>works</li>
                         </a>
-                        <a href="./about.html">
+                        <a href="./about2.html">
                             <li>contact</li>
                         </a>
                     </ul>
                 </div>
             </div>
         </header>
-        <div class="main">
-            <h1>
-                <img src="demo/spotlight.svg" alt="Spotlight.js: Modern HTML5 Image Gallery">
-            </h1>
-            <a href="https://github.com/nextapps-de/spotlight">Goto Github</a><br>
-            <hr>
-            <br>
-            <b>Anchors &amp; Images</b>
+        <main>
             <div class="spotlight-group" data-fit="contain" data-autohide="all">
                 <a class="spotlight" href="demo/gallery/brooklyn-bridge-1791001.jpg" data-button="Click Me!"
                     data-button-href="javascript:alert('You can open an URL or execute some Javascript here.')"
@@ -148,95 +214,10 @@
                     <img src="demo/gallery/canada-2340312.jpg" alt="Duis autem vel eum iriure dolor">
                 </a>
             </div>
-            <br><br>
-            <b>Custom Elements, Videos &amp; Node Fragments</b>
-            <div class="spotlight-group">
-                <div class="spotlight" data-media="image" data-src="demo/gallery/godafoss-1840758.jpg"
-                    data-description="In hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.">
-                    <img src="demo/gallery/godafoss-1840758-thumb.jpg" alt="Duis autem vel eum iriure dolor">
-                </div>
-                <a class="spotlight" data-media="video"
-                    data-src-webm="https://nextapps.de/video/spotlight/big_buck_bunny.webm"
-                    data-src-ogg="https://nextapps.de/video/spotlight/big_buck_bunny.ogv"
-                    data-src-mp4="https://nextapps.de/video/spotlight/big_buck_bunny.mp4" data-autoplay="false"
-                    data-poster="demo/gallery/poster.jpg">
-                    <img src="demo/gallery/poster.jpg">
-                </a>
-                <a class="spotlight" data-media="node" data-src="#fragment">
-                    <img src="demo/gallery/brooklyn-bridge-1791001-thumb.jpg">
-                    <img src="demo/gallery/california-1751455-thumb.jpg">
-                    <img src="demo/gallery/montana-1829251-thumb.jpg">
-                </a>
-                <div class="spotlight" data-src="demo/gallery/brooklyn-bridge-1791001.jpg"></div>
-            </div>
-            <!-- Hidden Backstore -->
-            <div style="display: none">
-                <div id="fragment" style="width: 100%">
-                    <b>Embedded Node Fragment</b><br><br>
-                    <img class="image" src="demo/gallery/brooklyn-bridge-1791001-thumb.jpg" width="500" height="334">
-                    <img class="image" src="demo/gallery/california-1751455-thumb.jpg" width="500" height="333">
-                    <img class="image" src="demo/gallery/montana-1829251-thumb.jpg" width="500" height="331">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <b>API Call</b><br>
-            Choose Controls (Toolbar):<br><br>
-            <div id="control">
-                <label><input type="checkbox" value="page" checked>Page</label>
-                <label><input type="checkbox" value="theme" checked>Theme</label>
-                <label><input type="checkbox" value="fullscreen" checked>Fullscreen</label>
-                <label><input type="checkbox" value="autofit">Autofit</label>
-                <label><input type="checkbox" value="zoom-in">Zoom +</label>
-                <label><input type="checkbox" value="zoom-out">Zoom -</label><br>
-                <label><input type="checkbox" value="close" checked>Close</label>
-                <label><input type="checkbox" value="download" checked>Download</label>
-                <label><input type="checkbox" value="play" checked>Play</label>
-                <label><input type="checkbox" value="prev" checked>Page Prev</label>
-                <label><input type="checkbox" value="next" checked>Page Next</label>
-            </div>
-            <br>
-            Choose Modifier:<br><br>
-            <div id="modifier">
-                <label><input type="checkbox" value="autoplay" checked>Autoplay</label>
-                <label><input type="checkbox" value="infinite" checked>Infinite Slide</label>
-                <label><input type="checkbox" value="spinner" checked>Spinner</label>
-                <label><input type="checkbox" value="preload" checked>Preload Next</label><br>
-                <label><input type="radio" name="autohide" value="false" checked>Autohide: Off</label>
-                <label><input type="radio" name="autohide" value="true" checked>Autohide: Controls</label>
-                <label><input type="radio" name="autohide" value="all">Autohide: All</label><br>
-                <label><input type="radio" name="fit" value="cover" checked>Autofit: Cover</label>
-                <label><input type="radio" name="fit" value="contain">Autofit: Contain</label><br>
-                <label><input type="radio" name="theme" value="" checked>Theme: default</label>
-                <label><input type="radio" name="theme" value="white">Theme: white</label>
-            </div>
-            <br>
-            Choose Animation:<br><br>
-            <div id="animation">
-                <label><input type="checkbox" value="slide" checked>Slide</label>
-                <label><input type="checkbox" value="fade" checked>Fade</label>
-                <label><input type="checkbox" value="scale">Scale</label>
-                <label><input type="checkbox" value="custom">Custom</label>
-            </div>
-            <br><br>
-            <div class="image" style="height: auto; margin: 0 1vmin">
-                <button onclick="showGallery(1)">Show</button>
-            </div>
-            <div class="image" style="height: auto; margin: 0 1vmin">
-                <button onclick="showGallery(2)">Show</button>
-            </div>
-            <div class="image" style="height: auto; margin: 0 1vmin">
-                <button onclick="showGallery(3)">Show</button>
-            </div>
-            <div>
-                <div class="image" style="background-image:url(demo/gallery/london-1758181-thumb.jpg)"></div>
-                <div class="image" style="background-image:url(demo/gallery/sea-1975403-thumb.jpg)"></div>
-                <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)"></div>
-            </div>
-        </div>
+            こ<br>こ<br>に<br>メ<br>イ<br>ン<br>コ<br>ン<br>テ<br>ン<br>ツ<br>を<br>か<br>く<br>よ<br>！<br>は<br>み<br>だ<br>し<br>て<br>も<br>ス<br>ク<br>ロ<br>ー<br>ル<br>し<br>て<br>く<br>れ<br>る<br>よ<br>！<br>は<br>み<br>だ<br>し<br>て<br>も<br>ス<br>ク<br>ロ<br>ー<br>ル<br>し<br>て<br>く<br>れ<br>る<br>よ<br>！<br>は<br>み<br>だ<br>し<br>て<br>も<br>ス<br>ク<br>ロ<br>ー<br>ル<br>し<br>て<br>く<br>れ<br>る<br>よ<br>！<br>は<br>み<br>だ<br>し<br>て<br>も<br>ス<br>ク<br>ロ<br>ー<br>ル<br>し<br>て<br>く<br>れ<br>る<br>よ<br>！<br>は<br>み<br>だ<br>し<br>て<br>も<br>ス<br>ク<br>ロ<br>ー<br>ル<br>し<br>て<br>く<br>れ<br>る<br>よ<br>！<br>
+        </main>
         <footer>
-            <div class="container">
+            <div class="footer-container">
                 <div class="footer-left">
                     <a href="#">
                         <img src="demo/gallery/london-1758181-thumb.jpg">
@@ -264,7 +245,6 @@
             </div>
         </footer>
     </div>
-
     <script>
 
         /* Full example of API usage including "like button" as a custom control */
